@@ -1,0 +1,41 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Repository: clive-py
+Description: An AI agent for processing long form video content into short clips. Should support local LLMs via Ollama as well as remote LLMs like OpenAI and Anthropic via LiteLLM.
+
+Directory Structure:
+- src/: Main application code
+  - src/agents/: Any agent related code, including tools and sub-agents.
+  - src/utils/: Utility code.
+  - Create new folders as needed.
+- tests/: Test files
+- docs/: Documentation. Must be markdown.
+- main.py: Main script for the user to execute.
+- .env.example: Example environment variables.
+
+Modules Used:
+- [smolagents](mdc:https:/huggingface.co/docs/smolagents/guided_tour) for agentic programming.
+- [fire](mdc:https:/github.com/google/python-fire) for easy CLI development.
+- [LiteLLM](mdc:https:/docs.litellm.ai/docs) for using any AI platform.
+- [sqlite-vec](mdc:https:/alexgarcia.xyz/sqlite-vec) for a local vector database via SQLite.
+- [pywhispercpp](mdc:https:/github.com/absadiki/pywhispercpp) for audio transcriptions.
+  - Requres FFMPEG to be installed on the system.
+  - For GPU acceleration support, see [their docs](mdc:https:/github.com/absadiki/pywhispercpp?tab=readme-ov-file#nvidia-gpu-support).
+
+Setup:
+- Uses [uv](mdc:https:/docs.astral.sh/uv) for package management.
+- Install `uv` on Mac & Linux: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Install `uv` on Windows: `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+- `uv sync` to create virtual environment and install packages.
+- `uv add <package name>` to add packages.
+- `uv remove <package name>` to remove packages
+
+Guidelines:
+- Follow PEP8 Guidelines
+- Write tests for all new features
+- Use strong type hinting.
+- Use modern Python features.
+

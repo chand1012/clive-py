@@ -1,0 +1,17 @@
+---
+description: Always follow these rules when creating github issues.
+globs: 
+alwaysApply: false
+---
+# GitHub Issues Rules
+- Only create issues on the repo `chand1012/clive-py`.
+- Be clear and detailed as possible whenever creating issues.
+- When creating bug reports, include as much context about the bug as possible, including but not limited to:
+  - Git commit hash and branch
+  - Python version
+  - Command executed
+  - Error logs
+  - Hardware information
+  - Operating system information
+  - Any other relevant information about files or the system.
+- When creating feature requests, include as much detail as possible about what the feature should do and how it should do it.
