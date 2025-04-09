@@ -13,4 +13,12 @@ Clive is an AI agent for processing long form video content into clips for easie
 
 ## Roadmap
 
-See []
+See the [project page](https://github.com/users/chand1012/projects/2).
+
+## Contributing
+
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md)
+
+## Code Style
+
+See [CODE_STYLE.md](docs/CODE_STYLE.md)
