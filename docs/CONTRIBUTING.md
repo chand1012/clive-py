@@ -2,6 +2,10 @@
 
 Thank you for your interest in contributing to clive-py! This document provides guidelines and instructions for contributing to the project.
 
+## Before You Start
+
+Be sure to check the issue you're working on (if one exists) is not already assigned to or claimed by another contributor. That way no one duplicates work, and we can keep the project moving forward!
+
 ## Development Setup
 
 ### Prerequisites
