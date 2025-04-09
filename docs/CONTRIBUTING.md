@@ -122,6 +122,9 @@ The project uses several key technologies:
 - Include relevant system information
 - Use issue templates if available
 
+## Code Style
+See [CODE_STYLE.md](CODE_STYLE.md)
+
 ## Code Review
 All submissions require review. We use GitHub pull requests for this purpose:
 1. Fork the repo and create your branch
