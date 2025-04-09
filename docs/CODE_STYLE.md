@@ -200,7 +200,7 @@ def add(x: int, y: int) -> int:
 ## 📦 Dependencies
 
 - Manage dependencies with **`uv`** only.
-  - Install with: `uv pip install <package>`
+  - Install with: `uv add <package>`
   - Lock dependencies with: `uv pip freeze > requirements.txt`
 - Pin versions in `pyproject.toml` or `requirements.txt`.
 - Separate dev and prod dependencies.
