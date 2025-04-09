@@ -203,6 +203,7 @@ def add(x: int, y: int) -> int:
   - Install with: `uv add <package>`
 - Pin versions in `pyproject.toml`.
 - Separate dev and prod dependencies.
+- Lock dependencies with `uv lock`.
 
 ---
 
