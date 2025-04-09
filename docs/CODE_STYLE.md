@@ -6,23 +6,11 @@ Welcome to the project! This guide outlines our code style, project structure, t
 
 ## 📁 Project Structure
 
-```
-project-root/
-├── src/
-│   └── your_package_name/
-├── tests/
-├── config/
-├── static/
-├── requirements.txt
-├── pyproject.toml
-└── README.md
-```
-
 - **`src/`**: All application code lives here.
 - **`tests/`**: Unit and integration tests live here.
 - **`config/`**: Application configuration settings.
 - **`static/`**: Static assets, if any.
-- **`requirements.txt` / `pyproject.toml`**: Dependency management files.
+- **`pyproject.toml`**: Dependency management files.
 
 ---
 
