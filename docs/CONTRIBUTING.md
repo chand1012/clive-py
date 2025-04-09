@@ -83,6 +83,7 @@ clive-py/
 - Utilize modern Python features
 - Keep functions focused and single-purpose
 - Write clear, descriptive variable and function names
+- More guidelines can be found in [CODE_STYLE.md](CODE_STYLE.md)
 
 ### Documentation
 - Document all new functions, classes, and modules
@@ -121,9 +122,6 @@ The project uses several key technologies:
 - Provide clear steps to reproduce bugs
 - Include relevant system information
 - Use issue templates if available
-
-## Code Style
-See [CODE_STYLE.md](CODE_STYLE.md)
 
 ## Code Review
 All submissions require review. We use GitHub pull requests for this purpose:
