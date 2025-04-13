@@ -12,7 +12,8 @@ def main():
 
     if not re.match(PATTERN, first_line):
         print(
-            "❌ Invalid commit message. Use Conventional Commits (e.g., feat: add feature)")
+            "❌ Invalid commit message. Use Conventional Commits (e.g., feat: add feature)"
+        )
         sys.exit(1)
 
 
