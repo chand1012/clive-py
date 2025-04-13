@@ -4,14 +4,11 @@ import tempfile
 from pathlib import Path
 from unittest import mock
 
-import pytest
 
 from src.utils.config import (
     EmbeddingConfig,
     LLMConfig,
     Settings,
-    get_config_dir,
-    get_config_path,
     get_settings,
     load_settings,
     reload_settings,
@@ -23,25 +20,19 @@ def test_config_models():
     """Test that the configuration models work correctly."""
     # Test LLMConfig
     llm_config = LLMConfig(
-        api_key="test_key",
-        api_base="http://test.com",
-        model_id="test/model"
+        api_key="test_key", api_base="http://test.com", model_id="test/model"
     )
     assert llm_config.api_key == "test_key"
     assert llm_config.api_base == "http://test.com"
     assert llm_config.model_id == "test/model"
 
     # Test EmbeddingConfig
-    embedding_config = EmbeddingConfig(
-        model_id="test-model"
-    )
+    embedding_config = EmbeddingConfig(model_id="test-model")
     assert embedding_config.model_id == "test-model"
 
     # Test Settings
     settings = Settings(
-        vision_llm=llm_config,
-        llm=llm_config,
-        embedding=embedding_config
+        vision_llm=llm_config, llm=llm_config, embedding=embedding_config
     )
     assert settings.vision_llm == llm_config
     assert settings.llm == llm_config
@@ -62,18 +53,12 @@ def test_load_and_save_settings(mock_get_config_path):
         # Test saving settings
         settings = Settings(
             vision_llm=LLMConfig(
-                api_key="test_key",
-                api_base="http://test.com",
-                model_id="test/model"
+                api_key="test_key", api_base="http://test.com", model_id="test/model"
             ),
             llm=LLMConfig(
-                api_key="test_key2",
-                api_base="http://test2.com",
-                model_id="test/model2"
+                api_key="test_key2", api_base="http://test2.com", model_id="test/model2"
             ),
-            embedding=EmbeddingConfig(
-                model_id="test-model"
-            )
+            embedding=EmbeddingConfig(model_id="test-model"),
         )
         save_settings(settings)
 
@@ -130,18 +115,12 @@ def test_get_settings_caching(mock_load_settings):
     # Create mock settings
     mock_settings = Settings(
         vision_llm=LLMConfig(
-            api_key="test_key",
-            api_base="http://test.com",
-            model_id="test/model"
+            api_key="test_key", api_base="http://test.com", model_id="test/model"
         ),
         llm=LLMConfig(
-            api_key="test_key2",
-            api_base="http://test2.com",
-            model_id="test/model2"
+            api_key="test_key2", api_base="http://test2.com", model_id="test/model2"
         ),
-        embedding=EmbeddingConfig(
-            model_id="test-model"
-        )
+        embedding=EmbeddingConfig(model_id="test-model"),
     )
     mock_load_settings.return_value = mock_settings
 
@@ -162,33 +141,21 @@ def test_reload_settings(mock_load_settings):
     # Create mock settings
     mock_settings1 = Settings(
         vision_llm=LLMConfig(
-            api_key="test_key",
-            api_base="http://test.com",
-            model_id="test/model"
+            api_key="test_key", api_base="http://test.com", model_id="test/model"
         ),
         llm=LLMConfig(
-            api_key="test_key2",
-            api_base="http://test2.com",
-            model_id="test/model2"
+            api_key="test_key2", api_base="http://test2.com", model_id="test/model2"
         ),
-        embedding=EmbeddingConfig(
-            model_id="test-model"
-        )
+        embedding=EmbeddingConfig(model_id="test-model"),
     )
     mock_settings2 = Settings(
         vision_llm=LLMConfig(
-            api_key="test_key3",
-            api_base="http://test3.com",
-            model_id="test/model3"
+            api_key="test_key3", api_base="http://test3.com", model_id="test/model3"
         ),
         llm=LLMConfig(
-            api_key="test_key4",
-            api_base="http://test4.com",
-            model_id="test/model4"
+            api_key="test_key4", api_base="http://test4.com", model_id="test/model4"
         ),
-        embedding=EmbeddingConfig(
-            model_id="test-model2"
-        )
+        embedding=EmbeddingConfig(model_id="test-model2"),
     )
 
     # First call to load_settings returns mock_settings1
@@ -197,6 +164,7 @@ def test_reload_settings(mock_load_settings):
 
     # Reset the global settings variable
     import src.utils.config
+
     src.utils.config._settings = None
 
     # Call get_settings to initialize the cache

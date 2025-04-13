@@ -6,7 +6,6 @@ Example script demonstrating how to use the configuration system.
 import json
 import os
 import sys
-from pathlib import Path
 
 # Add the workspace directory to the Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -46,16 +45,14 @@ def main():
         vision_llm=LLMConfig(
             api_key="ollama",
             api_base="http://localhost:11434",
-            model_id="ollama/gemma3:12b"
+            model_id="ollama/gemma3:12b",
         ),
         llm=LLMConfig(
             api_key="ollama",
             api_base="http://localhost:11434",
-            model_id="ollama/gemma3:12b"
+            model_id="ollama/gemma3:12b",
         ),
-        embedding=EmbeddingConfig(
-            model_id="nomic-embed-text"
-        )
+        embedding=EmbeddingConfig(model_id="nomic-embed-text"),
     )
     save_settings(default_settings)
     print("\nSettings reset to default values.")
